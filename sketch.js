@@ -15,8 +15,11 @@ function windowResized(){
   resizeCanvas(windowWidth,windowHeight);
 }
 
+function preload(){
+  song = loadSound('It G Ma - Medasin Remix (Cut).mp3');
+}
+
 function setup() {
-  song = loadSound('It G Ma - Medasin Remix (Cut).mp3',loaded);
   //volumeSlider = createSlider(0,1,0.5,0.01);
   //volumeSlider.position(25, 86);
   amp = new p5.Amplitude();
@@ -26,16 +29,17 @@ function setup() {
   canvas.position(0,0);
   stroke(200);
   background(bg);
+  console.log("Created by Kyle Macmillan 05/10/2018");
 }
 
-function loaded(){
-  console.log("Song loaded");
+//function loaded(){
+//  console.log("Song loaded");
   //jumpButton = createButton("Jump");
   //jumpButton.mousePressed(jumpSong);
   //jumpButton.position(windowWidth/2-windowWidth/3.5, 20);
   //volumeSlider = createSlider(0,1,0.5,0.01);
   //volumeSlider.position(windowWidth/2-windowWidth/4, 20);
-}
+//}
 
 function draw() {
   background(bg);
@@ -66,6 +70,7 @@ function draw() {
   textAlign(LEFT);
   text('Song: IT G MA Remix (josh pan Opus)',windowWidth*(3/4),windowHeight-circCanvasY/2);
   text('Artist: Keith Ape',windowWidth*(3/4),windowHeight-circCanvasY/7);
+  //text('Web App: Kyle Macmillan',windowWidth*(3/3.5),windowHeight-circCanvasY/7);
   //text('Artist: Keith Ape',windowWidth*(3/4.5),circCanvasY+circCanvasY/2);
 
   noFill();
