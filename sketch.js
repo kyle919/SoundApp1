@@ -138,6 +138,7 @@ function draw() {
 
   function mousePressed(){
     if(isOverRectangle == true && !song.isPlaying()){
+      getAudioContext().resume()
       song.play();
       play='Pause';
       textSize(30);
