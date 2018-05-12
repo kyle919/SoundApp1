@@ -10,6 +10,7 @@ var bg;
 var play = 'Play';
 var isOverCircle;
 
+//GitHub test for Kate
 
 function windowResized(){
   resizeCanvas(windowWidth,windowHeight);
